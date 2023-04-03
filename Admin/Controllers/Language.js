@@ -24,4 +24,18 @@ const addLanguage = async (req, res, next) => {
   return res.status(201).json({ language });
 };
 
-export { addLanguage };
+const getLanguages = async (req, res, nex) => {
+  let languages;
+  try {
+    languages = await Languages.find();
+  } catch (error) {
+    return console.log(error);
+  }
+  if (!languages) {
+    return res.status(404).json({ message: "No language found" });
+  }
+  // console.log(languages);
+  return res.status(200).json({ languages });
+};
+
+export { addLanguage, getLanguages };
