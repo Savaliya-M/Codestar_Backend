@@ -35,6 +35,9 @@ const getLanguages = async (req, res, nex) => {
     return res.status(404).json({ message: "No language found" });
   }
   // console.log(languages);
+  // console.log(languages);
+  // console.log(languages);
+  // console.log(languages);
   return res.status(200).json({ languages });
 };
 
