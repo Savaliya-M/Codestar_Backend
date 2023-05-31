@@ -20,7 +20,7 @@ var allowCrossDomain = function (req, res, next) {
   res.header("Access-Control-Allow-Headers", "Content-Type");
   next();
 };
-app.use(allowCrossDomain); //allow trafic from cros platform
+app.use(allowCrossDomain); //allow traffic from cross platform
 
 const port = process.env.PORT || 5000;
 mongoose
